@@ -27,7 +27,7 @@ Use the following commands to create and manage notes:
 
 - `./quicknote edit <ID> "New content"`: Updates the content of a specific note.
 
-- `./quicknote delete <ID>`: Deletes a specific note based on its ID.
+- `./quicknote remove <ID>`: Deletes a specific note based on its ID.
 
 - `./quicknote search "Search term"`: Searches all notes for the specified search term and displays matches.
 
