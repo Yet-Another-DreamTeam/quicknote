@@ -8,6 +8,7 @@
 #include <functional>
 #include <algorithm>
 #include <iterator>
+#include "../lib/lpstd/lpstd.hpp"
 
 struct commandInfo
 {
@@ -16,7 +17,7 @@ struct commandInfo
     void (*func)(int argc, char *argv[]);
 };
 
-class Command
+class Command : public lpstd::Singleton<Command>
 {
 
 private:

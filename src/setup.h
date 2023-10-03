@@ -8,8 +8,9 @@
 #include <sys/stat.h>
 #include <filesystem>
 #include <fstream>
+#include "../lib/lpstd/lpstd.hpp"
 
-class Setup
+class Setup : public lpstd::Singleton<Setup>
 {
 private:
 public:

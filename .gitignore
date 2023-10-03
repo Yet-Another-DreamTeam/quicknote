@@ -33,3 +33,9 @@
 
 # VSCode
 .vscode
+
+# lpstd
+lib/lpstd/
+
+# 
+*.drawio

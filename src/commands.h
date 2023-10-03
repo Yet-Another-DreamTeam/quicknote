@@ -35,6 +35,13 @@ namespace commands
         std::cout << "search" << std::endl;
     }
 
+    // not implemented
+    void collect(int argc, char *argv[])
+    {
+        // lpstd::NotImplementedException();
+        std::cout << "collect" << std::endl;
+    }
+
     void help(int argc, char *argv[])
     {
         std::cout << "help" << std::endl;
