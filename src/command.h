@@ -43,6 +43,14 @@ public:
 
     void execute(int argc, char *argv[])
     {
+
+        if (argc < 2)
+        {
+            std::cout << "Command not found" << std::endl;
+            throw lpstd::exceptions::ParameterException("argc < 2");
+            return;
+        }
+
         std::string command = argv[1];
         std::vector<std::string> args;
         for (int i = 2; i < argc; i++)

@@ -6,7 +6,7 @@
 
 using namespace lpstd::exceptions;
 
-    namespace commands
+namespace commands
 {
     void add(int argc, char *argv[])
     {
