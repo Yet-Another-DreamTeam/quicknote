@@ -3,5 +3,5 @@
 #include "./command.h"
 #include "./commands.h"
 
-Setup setup = Setup();
+Setup setup;
 Command command;
