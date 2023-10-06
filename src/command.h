@@ -41,6 +41,16 @@ public:
         this->commands.push_back(command);
     }
 
+    std::string getHelpAsString()
+    {
+        std::string help = "";
+        for (auto &commandInfo : this->commands)
+        {
+            help += commandInfo.name + " - " + commandInfo.description + "\n";
+        }
+        return help;
+    }
+
     void execute(int argc, char *argv[])
     {
 

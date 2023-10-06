@@ -3,5 +3,5 @@
 #include "./command.h"
 #include "./commands.h"
 
-Setup setup;
-Command command;
+Setup &setup = Setup::Instance();
+Command &command = Command::Instance();

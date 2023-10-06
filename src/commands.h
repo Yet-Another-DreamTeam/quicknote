@@ -8,6 +8,9 @@ using namespace lpstd::exceptions;
 
 namespace commands
 {
+
+    Command &command = Command::Instance();
+
     void add(int argc, char *argv[])
     {
         std::cout << "add" << std::endl;
@@ -53,8 +56,8 @@ namespace commands
 
     void help(int argc, char *argv[])
     {
-        std::cout << "help" << std::endl;
-        throw NotImplementedException();
+        // std::cout << "help" << std::endl;
+        std::cout << command.getHelpAsString() << std::endl;
     }
 
 } // namespace commands
