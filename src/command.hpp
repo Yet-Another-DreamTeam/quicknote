@@ -45,10 +45,17 @@ public:
     std::string getHelpAsString()
     {
         std::string help = "";
-        for (auto &commandInfo : this->commands)
+        std::list<commandInfo> sortedCommands = this->commands;
+
+        sortedCommands.sort([](const commandInfo &a, const commandInfo &b) {
+            return a.name < b.name;
+        });
+
+        for (auto &commandInfo : sortedCommands)
         {
             help += commandInfo.name + " - " + commandInfo.description + "\n";
         }
+
         return help;
     }
 
