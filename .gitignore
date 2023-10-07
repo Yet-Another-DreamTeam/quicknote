@@ -28,6 +28,7 @@
 
 # Executables
 *.exe
+quicknote
 *.out
 *.app
 
