@@ -11,52 +11,61 @@ namespace commands
 
     Command &command = Command::Instance();
 
-    void add(int argc, char *argv[])
+    void NotImplemented()
     {
-        std::cout << "add" << std::endl;
+        std::cout << "command: '" << command.getCurrentCommand().name << "' is not implemented" << std::endl;
         throw NotImplementedException();
     }
 
-    void list(int argc, char *argv[])
+    void add()
     {
-        std::cout << "list" << std::endl;
-        throw NotImplementedException();
+        std::cout << command.getCurrentCommand().name << std::endl;
+
+        if (command.existsArg("-n", "--namespace"))
+        {
+            std::cout << "namespace: " << command.getArg("-n", "--namespace") << std::endl;
+        }
+        else
+        {
+            std::cout << "namespace: "
+                      << "default" << std::endl;
+        }
+
+        // throw NotImplementedException();
     }
 
-    void view(int argc, char *argv[])
+    void list()
     {
-        std::cout << "view" << std::endl;
-        throw NotImplementedException();
+        NotImplemented();
     }
 
-    void edit(int argc, char *argv[])
+    void view()
     {
-        std::cout << "edit" << std::endl;
-        throw NotImplementedException();
+        NotImplemented();
     }
 
-    void remove(int argc, char *argv[])
+    void edit()
     {
-        std::cout << "remove" << std::endl;
-        throw NotImplementedException();
+        NotImplemented();
     }
 
-    void search(int argc, char *argv[])
+    void remove()
     {
-        std::cout << "search" << std::endl;
-        throw NotImplementedException();
+        NotImplemented();
     }
 
-    // not implemented
-    void collect(int argc, char *argv[])
+    void search()
     {
-        std::cout << "collect" << std::endl;
-        throw NotImplementedException();
+        NotImplemented();
     }
 
-    void help(int argc, char *argv[])
+    void collect()
     {
-        // std::cout << "help" << std::endl;
+        NotImplemented();
+    }
+
+    void help()
+    {
         std::cout << command.getHelpAsString() << std::endl;
     }
 
