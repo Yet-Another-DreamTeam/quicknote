@@ -10,9 +10,10 @@ int main(int argc, char *argv[])
     command.addCommand("search", "search quicknote", commands::search);
     command.addCommand("help", "show help", commands::help);
 
+    setup.runSetup();
+
     command.execute(argc, argv);
 
-    setup.runSetup();
     // std::cout << "quicknote!" << std::endl;
     return 0;
 }
