@@ -1,7 +1,7 @@
 #include <iostream>
-#include "./setup.h"
-#include "./command.h"
-#include "./commands.h"
+#include "./setup.hpp"
+#include "./command.hpp"
+#include "./commands.hpp"
 
 Setup &setup = Setup::Instance();
 Command &command = Command::Instance();
