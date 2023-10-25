@@ -20,18 +20,14 @@ namespace commands
     void add()
     {
         std::cout << command.getCurrentCommand().name << std::endl;
+        std::string command_namespace = "default";
 
         if (command.existsArg("-n", "--namespace"))
         {
-            std::cout << "namespace: " << command.getArg("-n", "--namespace") << std::endl;
+            command_namespace = command.getArg("-n", "--namespace");
         }
-        else
-        {
-            std::cout << "namespace: "
-                      << "default" << std::endl;
-        }
-
         // throw NotImplementedException();
+        std::cout << "namespace: " << command_namespace << std::endl;
     }
 
     void list()
